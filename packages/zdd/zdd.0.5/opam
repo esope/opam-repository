@@ -9,7 +9,7 @@ homepage: "https://gitlab.inria.fr/bmontagu/zdd"
 bug-reports: "https://gitlab.inria.fr/bmontagu/zdd/-/issues"
 depends: [
   "dune" {>= "3.17"}
-  "ocaml" {>= "4.12.0"}
+  "ocaml" {>= "4.12"}
   "odoc" {with-doc}
 ]
 build: [
@@ -34,4 +34,4 @@ url {
     "sha512=260c835125d45f3127862bd0e5f834e5f80a32fd7c99be19c0e03a5ce84b78b1479d949099d9e42aa6a21cac742a4393712139affcbbe71016c854cf570488a8"
   ]
 }
-x-commit-hash: "1333fb411acb370b3bfe95e5d00dd552582fc207"
+x-commit-hash: "93452f78aec8cd1119d069df54cb88d6c7e799f7"
