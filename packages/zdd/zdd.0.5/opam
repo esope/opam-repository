@@ -1,0 +1,36 @@
+opam-version: "2.0"
+synopsis: """
+Implementation of ZDDs, as well as upward-closed and
+  downward-closed set families"""
+maintainer: ["Benoît Montagu <benoit.montagu@inria.fr>"]
+authors: ["Benoît Montagu <benoit.montagu@inria.fr>"]
+license: "LGPL-3.0-or-later"
+homepage: "https://gitlab.inria.fr/bmontagu/zdd"
+bug-reports: "https://gitlab.inria.fr/bmontagu/zdd/-/issues"
+depends: [
+  "dune" {>= "3.17"}
+  "odoc" {with-doc}
+]
+build: [
+  ["dune" "subst"] {dev}
+  [
+    "dune"
+    "build"
+    "-p"
+    name
+    "-j"
+    jobs
+    "@install"
+    "@runtest" {with-test}
+    "@doc" {with-doc}
+  ]
+]
+dev-repo: "git+https://gitlab.inria.fr/bmontagu/zdd"
+url {
+  src: "https://bmontagu.gitlabpages.inria.fr/zdd/releases/zdd-v0.5.tbz"
+  checksum: [
+    "sha256=2242b826295e56da98bf5872ef3df09e0c4ad743d0e6f1a02bac7b3efdaedcba"
+    "sha512=260c835125d45f3127862bd0e5f834e5f80a32fd7c99be19c0e03a5ce84b78b1479d949099d9e42aa6a21cac742a4393712139affcbbe71016c854cf570488a8"
+  ]
+}
+x-commit-hash: "2542b382125d10193926f919333c458a3ef4ae81"
